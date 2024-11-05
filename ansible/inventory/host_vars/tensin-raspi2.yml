@@ -1,0 +1,10 @@
+wg_private_key: uHx7574vuoiKRu0Ka2P2E05GoAGJknE1HoxgvpKo030=
+wg_addr4: '{{ wg_prefix4 }}.4/24'
+wg_addr6: '{{ wg_prefix6 }}.4/48'
+
+wg_peers:
+  - public_key: YByJZb0SltMEdThLg2eiecyFfwGDw1nlapTPwURYxTM=
+    preshared_key: f/gBtPEZJtw1BDM+dmXAGLNE0lpsYl083a5Z+skVkKk=
+    allowed_ips: '{{ wg_prefix4 }}.0/24, {{ wg_prefix6 }}.0/48'
+    endpoint: vpn.tensin.name:443
+    persistent_keepalive: true

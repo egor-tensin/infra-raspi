@@ -1,0 +1,5 @@
+- name: Configure Wireguard
+  hosts: init
+  gather_facts: false
+  roles:
+    - tensin.infra.wireguard

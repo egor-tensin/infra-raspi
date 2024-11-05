@@ -1,0 +1,6 @@
+ansible_user: egor
+ansible_port: 22
+
+wg_prefix4: '192.168.205'
+wg_prefix6: 'fd9d:bc11:4021::192.168.205'
+wg_name: vpn

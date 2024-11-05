@@ -1,0 +1,10 @@
+- name: General maintenance
+  hosts: all
+  gather_facts: false
+  roles:
+    - role: tensin.infra.debian_server
+      vars:
+        debian_server_unattended_upgrades: false
+    - tensin.infra.wireguard
+    - tensin.infra.docker
+    - tensin.infra.my_dotfiles
