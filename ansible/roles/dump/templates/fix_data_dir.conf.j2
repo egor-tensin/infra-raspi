@@ -1,0 +1,7 @@
+{{ ansible_managed | comment }}
+
+[Unit]
+RequiresMountsFor=/mnt/external
+
+[Service]
+Environment="DOCKER_OPTS=--data-root /mnt/external/docker"

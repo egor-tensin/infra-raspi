@@ -8,3 +8,20 @@
     - tensin.infra.wireguard
     - tensin.infra.docker
     - tensin.infra.my_dotfiles
+
+- name: Set up the dump
+  hosts: dump
+  gather_facts: false
+  roles:
+    - role: tensin.infra.my_workspace
+      vars:
+        # Only clone until Docker is set up; this will make sure any volumes
+        # are present when Docker's --data-dir is configured.
+        my_workspace_clone_only: true
+    - dump
+
+- name: Workspace
+  hosts: all
+  gather_facts: false
+  roles:
+    - tensin.infra.my_workspace
