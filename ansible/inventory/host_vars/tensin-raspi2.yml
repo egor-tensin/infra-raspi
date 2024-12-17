@@ -1,8 +1,3 @@
-firewall_ports4_tcp:
-  # server-tensin-raspi2
-  - port: 80
-    source: '{{ wg_addr4 }}'
-
 my_workspace_projects:
   - url: 'ssh://git@bitbucket.org/egor-tensin/server-tensin-raspi2.git'
     name: server

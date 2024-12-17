@@ -19,6 +19,14 @@
         # are present when Docker's --data-dir is configured.
         my_workspace_clone_only: true
     - dump
+    - role: tensin.infra.samba
+      vars:
+        samba_share_name: dump
+        samba_share_dir: /mnt/dump
+    - role: tensin.infra.nfs
+      vars:
+        nfs_dir: /mnt/dump
+        nfs_all_squash: true
 
 - name: Workspace
   hosts: all
