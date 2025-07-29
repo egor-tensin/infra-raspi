@@ -1,4 +1,4 @@
-tensin-raspi2	ansible_host=192.168.205.4
+tensin-raspi2.home	ansible_host=192.168.205.4
 
 [dump]
-tensin-raspi2
+tensin-raspi2.home
