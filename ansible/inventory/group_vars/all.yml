@@ -1,15 +1,15 @@
 ansible_user: egor
 ansible_port: 22
 
-name: Egor Tensin
-email: egor@tensin.name
+my_name: Egor Tensin
+my_email: egor@tensin.name
 
 # What? json-file is unrestricted in size by default? One of my logs ate all
 # space on my partition!
 docker_logging_driver: local
 
-my_workspace_git_name: '{{ name }}'
-my_workspace_git_email: '{{ email }}'
+my_workspace_git_name: '{{ my_name }}'
+my_workspace_git_email: '{{ my_email }}'
 
 samba_guest_account: '{{ ansible_user }}'
 
