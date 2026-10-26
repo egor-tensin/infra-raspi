@@ -4,6 +4,7 @@ ansible_port: 22
 my_name: Egor Tensin
 my_email: egor@tensin.name
 
+docker_enable_service: true
 # What? json-file is unrestricted in size by default? One of my logs ate all
 # space on my partition!
 docker_logging_driver: local
