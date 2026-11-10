@@ -5,6 +5,7 @@
     - vars/vault.yml
   roles:
     - tensin.infra.debian
+    - tensin.infra.linux_status
     - networking
     - tensin.infra.docker
     - tensin.infra.my_dotfiles
