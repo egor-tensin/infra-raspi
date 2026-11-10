@@ -2,13 +2,18 @@ my_workspace_projects:
   - url: 'ssh://git@bitbucket.org/egor-tensin/server-tensin-raspi2.git'
     name: server
 
-wg_private_key: '${{ raspi2.wg.private_key }}'
-wg_addr4: '{{ wg_prefix4 }}.4/24'
-wg_addr6: '{{ wg_prefix6 }}.4/48'
-
-wg_peers:
-  - public_key: xD/Gy9P78zDDxWY64n8G5Ku3zkR8B/SPgSYVCt1ekgE=
-    preshared_key: '${{ raspi2.wg.psk.vpn }}'
-    allowed_ips: ['{{ wg_prefix4 }}.0/24, {{ wg_prefix6 }}.0/48']
+wireguard_private_key: '{{ raspi2.wg.private_key }}'
+wireguard_addr4: '{{ wireguard_prefix4 }}.4/24'
+wireguard_addr6: '{{ wireguard_prefix6 }}.4/48'
+wireguard_peers_ger:
+  - public_key: hMKs36wq+gnp6fVIIgGRVL42q78+Rnj/3RCEWGA69Bs=
+    preshared_key: '{{ raspi2.wg.psk.vpn }}'
+    allowed_ips: '{{ wireguard_allowed_ips }}'
     endpoint: vpn.tensin.name:443
+    persistent_keepalive: true
+wireguard_peers_rus:
+  - public_key: XW2gwuu1pVYe4cXuk32jsgvqstx7Yd0/hj3hefRzaXQ=
+    preshared_key: '{{ raspi2.wg.psk.vpn_ru }}'
+    allowed_ips: '{{ wireguard_allowed_ips }}'
+    endpoint: vpn-ru.tensin.name:443
     persistent_keepalive: true

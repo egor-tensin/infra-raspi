@@ -4,10 +4,8 @@
   vars_files:
     - vars/vault.yml
   roles:
-    - role: tensin.infra.debian
-      vars:
-        debian_server_unattended_upgrades: false
-    - tensin.infra.wireguard
+    - tensin.infra.debian
+    - networking
     - tensin.infra.docker
     - tensin.infra.my_dotfiles
     - tensin.infra.my_workspace
