@@ -1,5 +1,5 @@
 my_workspace_projects:
-  - url: 'ssh://git@bitbucket.org/egor-tensin/server-tensin-raspi2.git'
+  - url: 'ssh://git@altssh.bitbucket.org:443/egor-tensin/server-tensin-raspi2.git'
     name: server
 
 wireguard_private_key: '{{ raspi2.wg.private_key }}'
